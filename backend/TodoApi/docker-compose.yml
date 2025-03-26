@@ -1,0 +1,15 @@
+﻿services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 0712@Danchiwaz.
+      POSTGRES_DB: todoapp
+    ports:
+      - "5433:5433"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
